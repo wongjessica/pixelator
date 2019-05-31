@@ -1,0 +1,23 @@
+body {
+    color: #6E6E6E;
+    background-color: #f7f7f7; 
+    font-family: times new roman;
+    line-height:13px;
+    font-size:14px;
+    padding: 0p;
+    margin: 0px;
+    background-image:url(http://i45.tinypic.com/16jhspi.png); 
+    background-attachment: fixed;
+    background-repeat: repeat;
+    }
+
+    #blogtitle{
+        position:fixed;
+        color:rgb(131, 153, 212);
+        text-shadow:2px 3px 2px #000000;
+        font-family:Comic Sans MS;
+        font-size:75px;
+        margin-top:70px;
+        margin-left:550px;
+        z-index:999;
+    }
