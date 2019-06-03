@@ -16,10 +16,10 @@ function myCreateFunction() {
 }
 
 let rowCount = 0;
-let colCount = 16;
+let colCount = 1;
 let cellsTable = document.getElementById("cells");
 
-function rowPlus() {
+function addRow() {
   let newRow = document.createElement("tr");
   for (let i = 0; i < colCount; i++) {
     let newCell = document.createElement("td");
@@ -31,12 +31,12 @@ function rowPlus() {
   rowCount++;
 };
 
-function rowMinus() {
+function deleteRow() {
   cellsTable.removeChild(cellsTable.lastChild);
   rowCount--;
 };
 
-function colPlus() {
+function addCol() {
   let children = Array.from(cellsTable.children);
   children.forEach((row) => {
     let newCell = document.createElement("td");
@@ -47,7 +47,7 @@ function colPlus() {
   colCount++;
 };
 
-function colMinus() {
+function deleteCol() {
   let children = Array.from(cellsTable.children);
   children.forEach((row) => {
     row.removeChild(row.lastChild);

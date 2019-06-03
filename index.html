@@ -7,48 +7,36 @@
 <title>Pixelator</title>
 <div id="blogtitle">Pixelator</div>
 
-<p>Click the buttons to create and delete row(s) for the table.</p>
-
-<table id="myTable">
-
-        <tr>
-          <td>[]</td>
-          <td>[]</td>
-        </tr>
-        <tr>
-          <td>[]</td>
-          <td>[]</td>
-        </tr>
-      </table>
-
-      <button onclick="myCreateFunction()">Create row</button>
-      <button onclick="myDeleteFunction()">Delete row</button>
-
+<p><br>&nbsp Click the buttons to create and delete row(s) for the table.</p>
 
 <body onkeydown="return false">
 
 
-        <div id ="container">
+        <div id ="cr">
                 <div id="row-button">
-                     Rows
-                  <button onclick="rowPlus()"> + </button>
-                  <button onclick="rowMinus()"> - </button>
+                     
+                  <button onclick="addRow()"> Add Row </button>
+                  <button onclick="deleteRow()"> Delete Row </button>
                 </div>
                 <div id="col-button">
-                     Columns
-                  <button onclick="colPlus()"> + </button>
-                  <button onclick="colMinus()"> - </button>
+                     
+                  <button onclick="addCol()"> Add Column </button>
+                  <button onclick="deleteCol()"> Delete Column </button>
                 </div>
                 <div id="color-select">
-                  Colors:
+                
                   <select id="select-color" onchange="updateColor()">
                     <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="purple">Purple</option>
-                    <option value="green">Green</option>
                     <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
                     <option value="white">White</option>
+                    <option value="#cdcdcd">Gray</option>
+                    <option value="#F781F3">Pink</option>
+                    <option value="#2EFEF7">Toothpaste</option>
+                    <option value="#00FF00">Lime</option>
                   </select>
                 </div>
                 <div>
