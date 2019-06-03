@@ -29,8 +29,8 @@ body {
     }
 
     td {
-        width: 48px;
-        height: 48px;
+        width: 25px;
+        height: 25px;
         background: rgb(0, 0, 0);
         padding: 0px;
     }
