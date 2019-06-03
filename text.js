@@ -1,3 +1,4 @@
+/*
 function myCreateFunction() {
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
@@ -13,12 +14,14 @@ function myCreateFunction() {
 
   function mouseOver() {
 	alert("Hey, I told you not to hover over me!");
-}
+  } 
+*/
 
 let rowCount = 0;
 let colCount = 1;
 let cellsTable = document.getElementById("cells");
 
+//Function adds a row when user prompts
 function addRow() {
   let newRow = document.createElement("tr");
   for (let i = 0; i < colCount; i++) {
@@ -31,11 +34,13 @@ function addRow() {
   rowCount++;
 };
 
+//Function deletes a row when user prompts
 function deleteRow() {
   cellsTable.removeChild(cellsTable.lastChild);
   rowCount--;
 };
 
+//Function adds a column when user prompts
 function addCol() {
   let children = Array.from(cellsTable.children);
   children.forEach((row) => {
@@ -47,6 +52,7 @@ function addCol() {
   colCount++;
 };
 
+//Function deletes a dolumn when user prompts
 function deleteCol() {
   let children = Array.from(cellsTable.children);
   children.forEach((row) => {
@@ -55,6 +61,7 @@ function deleteCol() {
   colCount--;
 };
 
+//Color Selector, self explanatory :3
 let colorSelector = document.getElementById("select-color");
 let color;
 function updateColor() {
@@ -62,6 +69,7 @@ function updateColor() {
 };
 updateColor();
 
+//Fills all blocks
 function fillAll(){
   let tableChildren = Array.from(cellsTable.children);
   tableChildren.forEach((row) => {
@@ -73,6 +81,7 @@ function fillAll(){
   });
 };
 
+//Fills all uncolored blocks
 function fillEmpty(){
   let tableChildren = Array.from(cellsTable.children);
   tableChildren.forEach((row) => {
@@ -83,12 +92,11 @@ function fillEmpty(){
 
         cell.style.backgroundColor =color;
       }
-      //console.log(cell.style.backgroundColor);
-
     });
   });
 };
 
+//Clears all blocks
 function clearB(){
   let tableChildren = Array.from(cellsTable.children);
   tableChildren.forEach((row) => {
@@ -100,11 +108,13 @@ function clearB(){
   });
 };
 
+//Function to color the cell on user prompt
 function colorCell(){
   console.log(this);
   this.style.backgroundColor = color;
 };
 
+//Function to work when dragged
 function colorCellDrag(param){
   if(param.buttons){
 
